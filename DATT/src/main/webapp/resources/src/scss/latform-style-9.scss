@@ -1,0 +1,168 @@
+@import "core/vars";
+@import "core/helper";
+
+body {
+    background: darken(white, 10%);
+}
+
+a {
+    color: #03a9f4;
+
+    &:hover, &:focus {
+        color: darken(#03a9f4, 15%);
+    }
+}
+
+.btn-primary {
+    background: #03a9f4 !important;
+    border: none;
+    border-radius: 10px !important;
+
+    &:focus {
+        color: white !important;
+    }
+}
+
+.btn-outline-primary {
+    border-color: #03a9f4;
+    color: #03a9f4;
+
+    &:hover, &:focus, &:active {
+        border-color: transparent !important;
+        color: white;
+        background: #03a9f4 !important;
+    }
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    background: #03a9f4 !important;
+    border: none;
+}
+
+.form-cover {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    top: 0;
+    clip-path: polygon(0 100%, 0 0, 90% 25%, 70% 100%);
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.form-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+
+    .form-icon-wrapper {
+        position: relative;
+
+        .form-icon-left, .form-icon-right {
+            padding: 0;
+            transform: translateY(-50%);
+            top: 50%;
+            font-size: 16px;
+            border: none;
+            position: absolute;
+            z-index: 4;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: darken(white, 40%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: white;
+            border-radius: 100px;
+        }
+
+        .form-icon-left {
+            left: 15px;
+        }
+
+        .form-icon-right {
+            right: 15px;
+            left: auto;
+        }
+    }
+}
+
+.card {
+    position: relative;
+    border: none;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.16);
+
+    .card-body {
+        padding: 50px;
+    }
+}
+
+.form-control {
+    height: auto;
+    padding: 13px 20px;
+    padding-left: 50px;
+    border: none;
+    background: darken(white, 5%);
+    border-radius: 10px !important;
+
+    &:focus {
+        box-shadow: none;
+        color: black;
+        background: darken(white, 8%);
+    }
+}
+
+.social-links {
+    display: flex;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        transition: all .3s;
+        color: black;
+
+        i {
+            width: 40px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            color: lighten(black, 30%);
+            border: 1px solid darken(white, 40%);
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover, &:focus {
+            text-decoration: none;
+            opacity: .8;
+
+            i {
+                border-color: darken(white, 50%);
+                color: black;
+            }
+        }
+    }
+}
+
+// Mobile compatibility settings
+
+@media (max-width: 768px) {
+    .form-cover {
+        display: none;
+    }
+}
