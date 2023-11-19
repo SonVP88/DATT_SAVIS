@@ -1,0 +1,208 @@
+@import "core/vars";
+@import "core/helper";
+
+a {
+    color: #673ab7;
+
+    &:hover, &:focus {
+        color: darken(#673ab7, 15%);
+    }
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #ff4955, #673ab7) !important;
+    border: none;
+    border-radius: 10px !important;
+}
+
+.btn-outline-primary {
+    border-color: #673ab7;
+    color: #673ab7;
+
+    &:hover, &:focus, &:active {
+        border-color: transparent !important;
+        color: white;
+        background: linear-gradient(90deg, #ff4955, #673ab7) !important;
+    }
+}
+
+.form-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    border: none;
+    margin: auto;
+    border-radius: 50px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+
+    .row {
+        .col {
+            padding: 30px;
+            min-height: 500px;
+
+            &:first-child {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                text-align: center;
+                background-size: cover !important;
+                background-position: center !important;
+                position: relative;
+
+                & > * {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                &:before {
+                    content: '';
+                    display: block;
+                    background: rgba(white, .90);
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                }
+            }
+
+            &:last-child {
+            }
+        }
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+
+    .form-icon-wrapper {
+        position: relative;
+
+        .form-icon-left, .form-icon-right {
+            padding: 0;
+            transform: translateY(-50%);
+            top: 50%;
+            font-size: 16px;
+            border: none;
+            position: absolute;
+            z-index: 4;
+            background: none;
+            transition: opacity .3s;
+            color: darken(white, 30%);
+        }
+
+        .form-icon-left {
+            left: 15px;
+        }
+
+        .form-icon-right {
+            right: 15px;
+            left: auto;
+        }
+    }
+}
+
+.form-control {
+    height: auto;
+    padding: 13px 20px;
+    padding-left: 45px;
+    border: none;
+    background: darken(white, 5%);
+    border-radius: 10px !important;
+
+    &:focus {
+        box-shadow: none;
+        color: black;
+        background: darken(white, 8%);
+    }
+}
+
+.social-links {
+    display: flex;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        transition: all .3s;
+        color: black;
+
+        i {
+            width: 40px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            height: 40px;
+            background: linear-gradient(90deg, #ff4955, #673ab7);
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover, &:focus {
+            text-decoration: none;
+            opacity: .8;
+        }
+    }
+}
+
+.form-shape-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+
+    .form-shape {
+        height: 50%;
+        position: relative;
+
+        &:first-child {
+            background: linear-gradient(90deg, #ff4955, #673ab7);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            svg {
+                path {
+                    fill: white;
+                }
+            }
+        }
+    }
+}
+
+// Mobile compatibility settings
+
+@media (max-width: 500px) {
+    .social-links {
+        display: block;
+
+        a {
+            margin-bottom: 15px;
+            justify-content: left;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        .row {
+            .col {
+                min-height: auto;
+            }
+        }
+    }
+}

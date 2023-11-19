@@ -1,0 +1,197 @@
+@import "vars";
+
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+.text-divider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    line-height: 14px;
+    margin: 30px 0;
+
+    &:before {
+        content: '';
+        display: block;
+        height: 1px;
+        flex: 1;
+        background: darken(white, 30%);
+        margin-right: 10px;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        flex: 1;
+        background: darken(white, 30%);
+        margin-left: 10px;
+    }
+}
+
+.btn {
+    font-size: 15px;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 30px;
+    line-height: 14px;
+    border-radius: .5rem;
+
+    &.btn-sm {
+        padding: 12px 20px;
+        font-size: 12px;
+    }
+
+    &.btn-lg {
+        padding: 20px 40px;
+        font-size: 16px;
+    }
+
+    &.btn-block {
+        width: 100%;
+        justify-content: center;
+    }
+
+    &.btn-white {
+        background: white;
+        color: black;
+
+        &:hover, &:focus {
+            background: rgba(white, .8);
+        }
+    }
+
+    &.btn-floating {
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        font-size: 18px !important;
+        justify-content: center;
+        border-radius: 50%;
+
+        &.btn-sm {
+            height: 35px;
+            width: 35px;
+            font-size: 14px !important;
+        }
+
+        &.btn-lg {
+            height: 65px;
+            width: 65px;
+            font-size: 22px !important;
+        }
+    }
+}
+
+.bg-facebook {
+    background: $color-facebook !important;
+}
+
+.bg-google {
+    background: $color-google !important;
+}
+
+.bg-twitter {
+    background: $color-twitter !important;
+}
+
+.bg-linkedin {
+    background: $color-linkedin !important;
+}
+
+.bg-dribbble {
+    background: $color-dribbble !important;
+}
+
+.bg-behance {
+    background: $color-behance !important;
+}
+
+.bg-github {
+    background: $color-github !important;
+}
+
+.bg-pinperest {
+    background: $color-pinterest !important;
+}
+
+// Border style
+
+.border-facebook {
+    color: $color-facebook !important;
+    border: 1px solid $color-facebook !important;
+
+    &:hover {
+        background: $color-facebook !important;
+        color: white !important;
+    }
+}
+
+.border-google {
+    color: $color-google !important;
+    border: 1px solid $color-google !important;
+
+    &:hover {
+        background: $color-google !important;
+        color: white !important;
+    }
+}
+
+.border-twitter {
+    color: $color-twitter !important;
+    border: 1px solid $color-twitter !important;
+}
+
+.border-linkedin {
+    color: $color-linkedin !important;
+    border: 1px solid $color-linkedin !important;
+}
+
+.border-dribbble {
+    color: $color-dribbble !important;
+    border: 1px solid $color-dribbble !important;
+}
+
+.border-behance {
+    color: $color-behance !important;
+    border: 1px solid $color-behance !important;
+}
+
+.border-github {
+    color: $color-github !important;
+    border: 1px solid $color-github !important;
+}
+
+.border-pinperest {
+    color: $color-pinterest !important;
+    border: 1px solid $color-pinterest !important;
+}
+
+.form-control {
+    font-size: 14px;
+    transition: all .3s;
+}
+
+.custom-checkbox {
+    user-select: none;
+}
+
+.form-wrapper {
+    padding: 30px 20px;
+    min-height: 100%;
+
+    .container, .container-fluid {
+        min-height: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .form-wrapper {
+        display: block !important;
+        padding: 20px 10px !important;
+    }
+}
